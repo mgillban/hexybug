@@ -423,7 +423,7 @@ for(int i=0;i<32;i++)//KillServos
 }
 
   
-}
+}//Final positions: hips 1500, knees ~1950, ankles 1050
 
 void Servotor32::center()////////////////////////////////////////////////////////////
 {
