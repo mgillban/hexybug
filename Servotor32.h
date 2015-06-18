@@ -32,8 +32,16 @@ public:
   void changeServo(byte, short);
   
   void standUp();
+  
+  void center();
+  
+  void killServos();
+  
+  void reset();
+  
   void forward();
   
+  void backward();
   
   void printStatus(Stream*);
   
@@ -52,3 +60,4 @@ private:
 };
 
 #endif
+
