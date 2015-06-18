@@ -43,6 +43,8 @@ public:
   
   void backward();
   
+  void rotateRight();
+  
   void printStatus(Stream*);
   
   void process(Stream*);
