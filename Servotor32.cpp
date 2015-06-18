@@ -719,6 +719,69 @@ void Servotor32::forward()//////////////////////////////////////////////////////
   changeServo(16,-1);
   delay_ms(10);
   }
+  
+ void Servotor32::rotateRight(){
+    
+    // Picks up the knees from tripod 1, rotates them to the front most position, then places them down. Picks up tripod 2, then rotates tripod 1 (while still on the ground) to middle position, then replaces tripod 2
+   
+    //tripod 1 == RF, LM, RB
+    //tripod 2 == LF, RM, LB
+    
+    //put the servos in the correct position from stand up function
+    //Final positions: hips 1500, knees ~1950, ankles 1050
+    reset();
+    
+    //pick up tripod 1
+    changeServo(25, 2000);
+    delay_ms(25);
+    changeServo(10, 2000);
+    delay_ms(25);
+    changeServo(17, 2000);
+    delay_ms(25);
+    
+    //move tripod to forward most position
+    changeServo(24, 2200);
+    delay_ms(25);
+    changeServo(11, 2200);
+    delay_ms(25);
+    changeServo(16, 2200);
+    delay_ms(25);
+    
+    //move tripod 1 down
+    changeServo(25, 1950);
+    delay_ms(25);
+    changeServo(10, 1950);
+    delay_ms(25);
+    changeServo(17, 1950);
+    delay_ms(25);
+    
+    //move tripod 2 up
+    changeServo(6, 2200);
+    delay_ms(25);
+    changeServo(21, 2200);
+    delay_ms(25);
+    changeServo(14, 2200);
+    delay_ms(25);
+    
+    //rotate tripod 1 back to original position
+    changeServo(24, 1500);
+    delay_ms(25);
+    changeServo(11, 1500);
+    delay_ms(25);
+    changeServo(16, 1500);
+    delay_ms(25);
+    
+    // move tripod 2 back down
+      changeServo(6, 1950);
+    delay_ms(25);
+    changeServo(21, 1950);
+    delay_ms(25);
+    changeServo(14, 1950);
+    delay_ms(25);
+    
+    reset();
+    
+  }
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 
