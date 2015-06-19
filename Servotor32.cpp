@@ -372,12 +372,12 @@ changeServo(16,1500);
 delay_ms(200);
 changeServo(18,500);
 delay_ms(100);
-changeServo(17,1950);
+changeServo(17,2100);
 changeServo(18,1050);
 delay_ms(200);
 changeServo(18,-1);
 changeServo(16,-1);
-changeServo(17,-1);
+//changeServo(17,-1);
 delay_ms(100);
 
 changeServo(6,1500);//LF
@@ -385,11 +385,11 @@ changeServo(7,1500);
 delay_ms(200);
 changeServo(5,600);
 delay_ms(100);
-changeServo(6,1950);
+changeServo(6,2100);
 changeServo(5,1050);
 delay_ms(200);
 changeServo(5,-1);
-changeServo(6,-1);
+//changeServo(6,-1);
 changeServo(7,-1);
 delay_ms(100);
   
@@ -398,12 +398,12 @@ changeServo(24,1500);
 delay_ms(200);
 changeServo(26,600);
 delay_ms(100);
-changeServo(25,1950);
+changeServo(25,2100);
 changeServo(26,1050);
 delay_ms(200);
 changeServo(24,-1);
 changeServo(26,-1);
-changeServo(25,-1);
+//changeServo(25,-1);
 delay_ms(100);
 
 changeServo(14,1500);//LB
@@ -411,12 +411,12 @@ changeServo(15,1500);
 delay_ms(200);
 changeServo(13,500);
 delay_ms(100);
-changeServo(14,1950);
+changeServo(14,2100);
 changeServo(13,1050);
 delay_ms(200);
 changeServo(13,-1);
 changeServo(15,-1);
-changeServo(14,-1);
+//changeServo(14,-1);
 delay_ms(100);
 
 for(int i=0;i<32;i++)//KillServos
@@ -425,7 +425,7 @@ for(int i=0;i<32;i++)//KillServos
 }
 
   
-}//Final positions: hips 1500, knees ~1950, ankles 1050
+}
 
 void Servotor32::center()////////////////////////////////////////////////////////////
 {
@@ -593,6 +593,15 @@ void Servotor32::forward()//////////////////////////////////////////////////////
   changeServo(10,-1);
   delay_ms(20);
   
+  changeServo(9,950);//Reposition ankles 2
+  changeServo(18,950);
+  changeServo(26,950);
+  delay_ms(300);
+  changeServo(9,-1);//Kill ankles 2
+  changeServo(18,-1);
+  changeServo(26,-1);
+  delay_ms(20);
+  
   changeServo(7,1750);//Move hips
   changeServo(20,1250);
   changeServo(15,1750);
@@ -608,6 +617,15 @@ void Servotor32::forward()//////////////////////////////////////////////////////
   changeServo(20,-1);
   changeServo(16,-1);
   delay_ms(10);
+  
+  changeServo(25,1950);//Put down Knees 2, stay on
+  changeServo(17,1950);
+  changeServo(10,1950);
+  delay_ms(200);
+  changeServo(25,-1);//Kill knees 2
+  changeServo(17,-1);
+  changeServo(10,-1);
+  delay_ms(20);
   }
   
   void Servotor32::backward()////////////////////////////////////////////////////////////////////////////////////
