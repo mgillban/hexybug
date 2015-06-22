@@ -49,6 +49,8 @@ public:
   
   void kickLeft();
   
+  void kickForward();
+  
   void printStatus(Stream*);
   
   void process(Stream*);
