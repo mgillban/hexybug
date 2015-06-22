@@ -447,7 +447,15 @@ void Servotor32::killServos()///////////////////////////////////////////////////
 
 void Servotor32::reset()/////////////////////////////////////////////////////////////////////////////////
 {
- changeServo(17,1500);//RB
+ changeServo(6,1950); //Stabalizes knees
+ changeServo(10,1950); 
+ changeServo(14,1950); 
+ changeServo(25,1950); 
+ changeServo(21,1950); 
+ changeServo(17,1950); 
+ delay_ms(100);
+ 
+changeServo(17,1500);//RB
 changeServo(16,1500);
 delay_ms(200);
 changeServo(18,500);
@@ -457,7 +465,7 @@ changeServo(18,1050);
 delay_ms(200);
 changeServo(18,-1);
 changeServo(16,-1);
-changeServo(17,-1);
+//changeServo(17,-1);
 delay_ms(100);
 
 changeServo(6,1500);//LF
@@ -469,8 +477,21 @@ changeServo(6,1950);
 changeServo(5,1050);
 delay_ms(200);
 changeServo(5,-1);
-changeServo(6,-1);
+//changeServo(6,-1);
 changeServo(7,-1);
+delay_ms(100);
+
+changeServo(21,1500);//RM
+changeServo(20,1500);
+delay_ms(200);
+changeServo(22,500);
+delay_ms(100);
+changeServo(21,1950);
+changeServo(22,1050);
+delay_ms(200);
+changeServo(22,-1);
+changeServo(20,-1);
+//changeServo(21,-1);
 delay_ms(100);
   
 changeServo(25,1500);//RF
@@ -483,7 +504,7 @@ changeServo(26,1050);
 delay_ms(200);
 changeServo(24,-1);
 changeServo(26,-1);
-changeServo(25,-1);
+//changeServo(25,-1);
 delay_ms(100);
 
 changeServo(14,1500);//LB
@@ -496,8 +517,28 @@ changeServo(13,1050);
 delay_ms(200);
 changeServo(13,-1);
 changeServo(15,-1);
-changeServo(14,-1);
-delay_ms(100); 
+//changeServo(14,-1);
+delay_ms(100);
+changeServo(6,-1); 
+ changeServo(10,-1); 
+ changeServo(14,-1); 
+ changeServo(25,-1); 
+ changeServo(21,-1); 
+ changeServo(17,-1);
+ delay_ms(10);
+ 
+ changeServo(10,1500);//LM
+changeServo(11,1500);
+delay_ms(200);
+changeServo(9,500);
+delay_ms(100);
+changeServo(10,1950);
+changeServo(9,1050);
+delay_ms(200);
+changeServo(9,-1);
+changeServo(10,-1);
+//changeServo(11,-1);
+delay_ms(100);
 }
 
 void Servotor32::forward()///////////////////////////////////////////////////////////////////
