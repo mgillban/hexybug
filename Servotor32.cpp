@@ -845,6 +845,8 @@ void Servotor32::forward()//////////////////////////////////////////////////////
 
 void Servotor32::kickRight()////////////////////////////////////////////////////////////////////////////////////
 {
+  changeServo(25,1950);
+  changeServo(17,1950);
   changeServo(21,700);
   changeServo(22,700);
   delay_ms(500);
@@ -854,6 +856,8 @@ void Servotor32::kickRight()////////////////////////////////////////////////////
   changeServo(21,1950);
   changeServo(22,1050);
   delay_ms(400);
+  changeServo(25,-1);
+  changeServo(17,-1);
   changeServo(21,-1);
   changeServo(22,-1);
   delay_ms(100);
