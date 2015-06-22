@@ -45,6 +45,10 @@ public:
   
   void rotateRight();
   
+  void kickRight();
+  
+  void kickLeft();
+  
   void printStatus(Stream*);
   
   void process(Stream*);
