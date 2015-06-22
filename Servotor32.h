@@ -49,7 +49,7 @@ public:
   
   void kickLeft();
   
-  void kickForward();
+  void kickFront();
   
   void printStatus(Stream*);
   
