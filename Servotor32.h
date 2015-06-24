@@ -45,6 +45,8 @@ public:
   
   void rotateRight();
   
+  void rotateLeft();
+  
   void kickRight();
   
   void kickLeft();
