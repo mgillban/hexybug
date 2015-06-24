@@ -367,7 +367,57 @@ for(int angle=1300; angle<2100; angle+=30)
   ankAngle+=15;
 }
 
-reset();
+changeServo(17,1500);//RB
+changeServo(16,1500);
+delay_ms(200);
+changeServo(18,500);
+delay_ms(100);
+changeServo(17,1950);
+changeServo(18,1050);
+delay_ms(200);
+changeServo(18,-1);
+changeServo(16,-1);
+changeServo(17,-1);
+delay_ms(100);
+
+changeServo(6,1500);//LF
+changeServo(7,1500);
+delay_ms(200);
+changeServo(5,600);
+delay_ms(100);
+changeServo(6,1950);
+changeServo(5,1050);
+delay_ms(200);
+changeServo(5,-1);
+changeServo(6,-1);
+changeServo(7,-1);
+delay_ms(100);
+  
+changeServo(25,1500);//RF
+changeServo(24,1500);
+delay_ms(200);
+changeServo(26,600);
+delay_ms(100);
+changeServo(25,1950);
+changeServo(26,1050);
+delay_ms(200);
+changeServo(24,-1);
+changeServo(26,-1);
+changeServo(25,-1);
+delay_ms(100);
+
+changeServo(14,1500);//LB
+changeServo(15,1500);
+delay_ms(200);
+changeServo(13,500);
+delay_ms(100);
+changeServo(14,1950);
+changeServo(13,1050);
+delay_ms(200);
+changeServo(13,-1);
+changeServo(15,-1);
+changeServo(14,-1);
+delay_ms(100);
 
 for(int i=0;i<32;i++)//KillServos
 {
@@ -375,7 +425,7 @@ for(int i=0;i<32;i++)//KillServos
 }
 
   
-}
+}//Final positions: hips 1500, knees ~1950, ankles 1050
 
 void Servotor32::center()////////////////////////////////////////////////////////////
 {
@@ -397,15 +447,7 @@ void Servotor32::killServos()///////////////////////////////////////////////////
 
 void Servotor32::reset()/////////////////////////////////////////////////////////////////////////////////
 {
- changeServo(6,1950); //Stabalizes knees
- changeServo(10,1950); 
- changeServo(14,1950); 
- changeServo(25,1950); 
- changeServo(21,1950); 
- changeServo(17,1950); 
- delay_ms(100);
- 
-changeServo(17,1500);//RB
+ changeServo(17,1500);//RB
 changeServo(16,1500);
 delay_ms(200);
 changeServo(18,500);
@@ -415,7 +457,7 @@ changeServo(18,1050);
 delay_ms(200);
 changeServo(18,-1);
 changeServo(16,-1);
-//changeServo(17,-1);
+changeServo(17,-1);
 delay_ms(100);
 
 changeServo(6,1500);//LF
@@ -427,21 +469,8 @@ changeServo(6,1950);
 changeServo(5,1050);
 delay_ms(200);
 changeServo(5,-1);
-//changeServo(6,-1);
+changeServo(6,-1);
 changeServo(7,-1);
-delay_ms(100);
-
-changeServo(21,1500);//RM
-changeServo(20,1500);
-delay_ms(200);
-changeServo(22,500);
-delay_ms(100);
-changeServo(21,1950);
-changeServo(22,1050);
-delay_ms(200);
-changeServo(22,-1);
-changeServo(20,-1);
-//changeServo(21,-1);
 delay_ms(100);
   
 changeServo(25,1500);//RF
@@ -454,7 +483,7 @@ changeServo(26,1050);
 delay_ms(200);
 changeServo(24,-1);
 changeServo(26,-1);
-//changeServo(25,-1);
+changeServo(25,-1);
 delay_ms(100);
 
 changeServo(14,1500);//LB
@@ -467,28 +496,8 @@ changeServo(13,1050);
 delay_ms(200);
 changeServo(13,-1);
 changeServo(15,-1);
-//changeServo(14,-1);
-delay_ms(100);
-changeServo(6,-1); 
- changeServo(10,-1); 
- changeServo(14,-1); 
- changeServo(25,-1); 
- changeServo(21,-1); 
- changeServo(17,-1);
- delay_ms(10);
- 
- changeServo(10,1500);//LM
-changeServo(11,1500);
-delay_ms(200);
-changeServo(9,500);
-delay_ms(100);
-changeServo(10,1950);
-changeServo(9,1050);
-delay_ms(200);
-changeServo(9,-1);
-changeServo(10,-1);
-//changeServo(11,-1);
-delay_ms(100);
+changeServo(14,-1);
+delay_ms(100); 
 }
 
 void Servotor32::forward()///////////////////////////////////////////////////////////////////
@@ -584,15 +593,6 @@ void Servotor32::forward()//////////////////////////////////////////////////////
   changeServo(10,-1);
   delay_ms(20);
   
-  changeServo(9,950);//Reposition ankles 2
-  changeServo(18,950);
-  changeServo(26,950);
-  delay_ms(300);
-  changeServo(9,-1);//Kill ankles 2
-  changeServo(18,-1);
-  changeServo(26,-1);
-  delay_ms(20);
-  
   changeServo(7,1750);//Move hips
   changeServo(20,1250);
   changeServo(15,1750);
@@ -608,15 +608,6 @@ void Servotor32::forward()//////////////////////////////////////////////////////
   changeServo(20,-1);
   changeServo(16,-1);
   delay_ms(10);
-  
-  changeServo(25,1950);//Put down Knees 2, stay on
-  changeServo(17,1950);
-  changeServo(10,1950);
-  delay_ms(200);
-  changeServo(25,-1);//Kill knees 2
-  changeServo(17,-1);
-  changeServo(10,-1);
-  delay_ms(20);
   }
   
   void Servotor32::backward()////////////////////////////////////////////////////////////////////////////////////
@@ -738,121 +729,73 @@ void Servotor32::forward()//////////////////////////////////////////////////////
     
     //put the servos in the correct position from stand up function
     //Final positions: hips 1500, knees ~1950, ankles 1050
-    reset();
     
+
     //pick up tripod 1
     changeServo(25, 2000);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(10, 2000);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(17, 2000);
-    delay_ms(25);
+    delay_ms(100);
+    
     
     //move tripod to forward most position
     changeServo(24, 2200);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(11, 2200);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(16, 2200);
-    delay_ms(25);
+   delay_ms(100);
+
+
+    
+
     
     //move tripod 1 down
     changeServo(25, 1950);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(10, 1950);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(17, 1950);
-    delay_ms(25);
+    delay_ms(100);
     
+
+    
+    
+
     //move tripod 2 up
     changeServo(6, 2200);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(21, 2200);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(14, 2200);
-    delay_ms(25);
+    delay_ms(100);
     
+
+    
+
     //rotate tripod 1 back to original position
     changeServo(24, 1500);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(11, 1500);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(16, 1500);
-    delay_ms(25);
+    delay_ms(100);
+
     
     // move tripod 2 back down
       changeServo(6, 1950);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(21, 1950);
-    delay_ms(25);
+//    delay_ms(25);
     changeServo(14, 1950);
-    delay_ms(25);
+    delay_ms(100);
     
-    reset();
+    
+  //  reset();
     
   }
-
-
-void Servotor32::kickRight()////////////////////////////////////////////////////////////////////////////////////
-{
-  changeServo(25,1950);
-  changeServo(17,1950);
-  changeServo(21,700);
-  changeServo(22,700);
-  delay_ms(500);
-  changeServo(21,1500);
-  changeServo(22,1500);
-  delay_ms(1000);
-  changeServo(21,1950);
-  changeServo(22,1050);
-  delay_ms(400);
-  changeServo(25,-1);
-  changeServo(17,-1);
-  changeServo(21,-1);
-  changeServo(22,-1);
-  delay_ms(100);
-}
-
-void Servotor32::kickLeft()////////////////////////////////////////////////////////////////////////////////////
-{
-  changeServo(10,700);
-  changeServo(9,700);
-  delay_ms(500);
-  changeServo(10,1500);
-  changeServo(9,1500);
-  delay_ms(1000);
-  changeServo(10,1950);
-  changeServo(9,1050);
-  delay_ms(400);
-  changeServo(10,-1);
-  changeServo(9,-1);
-  delay_ms(100);
-}
-
-void Servotor32::kickFront()///////////////////////////////////////////////////////////////////////////////////////////
-{
-  changeServo(25,1950);
-  changeServo(6,1950);
-  
-  changeServo(24,1950);
-  changeServo(25,700);
-  changeServo(26,700);
-  delay_ms(500);
-  changeServo(25,1500);
-  changeServo(26,1500);
-  delay_ms(1000);
-  changeServo(24,1500);
-  changeServo(25,1950);
-  changeServo(26,1050);
-  delay_ms(400);
-  changeServo(6,-1);
-  changeServo(17,-1);
-  changeServo(25,-1);
-  changeServo(26,-1);
-  delay_ms(100);
-	
-}
-
 
 // /////////////////////////////////////////////////////////////////////////////////////////////////////
 
