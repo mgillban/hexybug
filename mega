@@ -1,0 +1,95 @@
+#include<Servo.h>
+  Servo s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18;
+
+
+void setup() {
+
+  s1.attach(22);
+  s1.writeMicroseconds(1500);
+
+  s2.attach(23);
+  s2.writeMicroseconds(1500);
+
+  s3.attach(24);
+  s3.writeMicroseconds(1500);
+s4.attach(26);
+  s4.writeMicroseconds(1500);
+s5.attach(27);
+  s5.writeMicroseconds(1500);
+  s6.attach(28);
+  s6.writeMicroseconds(1500);
+s7.attach(30);
+  s7.writeMicroseconds(1500);
+
+  s8.attach(31);
+  s8.writeMicroseconds(1500);
+s9.attach(32);
+  s9.writeMicroseconds(1500);
+  s10.attach(34);
+  s10.writeMicroseconds(1500);
+s11.attach(35);
+  s11.writeMicroseconds(1500);
+  s12.attach(36);
+  s12.writeMicroseconds(1500);
+  s13.attach(38);
+  s13.writeMicroseconds(1500);
+  s14.attach(39);
+  s14.writeMicroseconds(1500);
+  s15.attach(40);
+  s15.writeMicroseconds(1500);
+  s16.attach(42);
+  s16.writeMicroseconds(1500);
+  s17.attach(43);
+  s17.writeMicroseconds(1500);
+  s18.attach(44);
+  s18.writeMicroseconds(1500);
+
+  
+
+  
+//int servo_lis = [s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15];
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  delay(1000);
+  s1.writeMicroseconds(2000);
+//  delay(1000);
+  s2.writeMicroseconds(2000);
+  delay(1000);
+s3.writeMicroseconds(2000);
+  delay(1000);
+  s4.writeMicroseconds(2000);
+  delay(1000);
+  s5.writeMicroseconds(2000);
+  delay(1000);
+  s6.writeMicroseconds(2000);
+  delay(1000);
+  s7.writeMicroseconds(2000);
+  delay(1000);
+  s8.writeMicroseconds(2000);
+  delay(1000);
+  s9.writeMicroseconds(2000);
+  delay(1000);
+  s10.writeMicroseconds(2000);
+  delay(1000);
+  s11.writeMicroseconds(2000);
+  delay(1000);
+  s12.writeMicroseconds(2000);
+  delay(1000);
+  s13.writeMicroseconds(2000);
+  delay(1000);
+  s14.writeMicroseconds(2000);
+  delay(1000);  
+  s15.writeMicroseconds(2000);
+  delay(1000);  
+  s16.writeMicroseconds(2000);
+  delay(1000);
+  s17.writeMicroseconds(2000);
+  delay(1000);
+  s18.writeMicroseconds(2000);
+  delay(1000);
+
+  
+  
+}
