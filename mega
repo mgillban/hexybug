@@ -93,3 +93,111 @@ s3.writeMicroseconds(2000);
   
   
 }
+void forward()
+{
+   //writeMicroseconds(25,-1);//Kill Knees 2
+  //writeMicroseconds(17,-1);
+  //writeMicroseconds(10,-1);
+  //delay_ms(20);
+  
+  //writeMicroseconds(14,1950);//Stabalizer Feet 1
+  //writeMicroseconds(6,1950);
+  //writeMicroseconds(21,1950);
+  //delay_ms(200);
+  
+  s17.writeMicroseconds(1750);//Pick Up Knees 2
+  s11.writeMicroseconds(1750);
+  s5.writeMicroseconds(1750);
+  delay(200);
+  //s17.writeMicroseconds(25,-1);//Kill Knees 2
+  //s11.writeMicroseconds(17,-1);
+  //s5.writeMicroseconds(10,-1);
+  //delay_ms(20);
+  
+  s6.writeMicroseconds(1250);//Reposition Hips 2
+  s18.writeMicroseconds(1750);
+  s12.writeMicroseconds(1750);
+  delay(200);
+  //s6.writeMicroseconds(11,-1);//Kill Hips 2
+  //s18.writeMicroseconds(24,-1);
+  //s12.writeMicroseconds(16,-1);
+  //delay_ms(200);
+
+  s4.writeMicroseconds(950);//Reposition ankles 2
+  s10.writeMicroseconds(950);
+  s16.writeMicroseconds(950);
+  delay(300);
+  //s4.writeMicroseconds(9,-1);//Kill ankles 2
+  //s10.writeMicroseconds(18,-1);
+  //s16.writeMicroseconds(26,-1);
+  //delay(20);
+
+  s17.writeMicroseconds(1950);//Put down Knees 2, stay on
+  s11.writeMicroseconds(1950);
+  s5.writeMicroseconds(1950);
+  delay(200);
+  
+  s8.writeMicroseconds(1750);//Pick up knees 1
+  s2.writeMicroseconds(1750);
+  s14.writeMicroseconds(1750);
+  delay(100);
+  //s8.writeMicroseconds(-1);//Kill knees 1
+  //s2.writeMicroseconds(-1);
+  //s14.writeMicroseconds(-1);
+  //delay(10);
+  
+  s13.writeMicroseconds(950);//Reposition ankles 1
+  s7.writeMicroseconds(950);
+  s1.writeMicroseconds(950);
+  delay(300);
+  //s13.writeMicroseconds(-1);//Kill ankles 1
+  //s7.writeMicroseconds(-1);
+  //s1.writeMicroseconds(-1);
+  //delay(20);
+  
+  s3.writeMicroseconds(1250);//Move hips
+  s15.writeMicroseconds(1750);
+  s9.writeMicroseconds(1250);
+  delay(100);
+  s18.writeMicroseconds(1250);
+  s6.writeMicroseconds(1750);
+  s12.writeMicroseconds(1250);
+  delay(100);
+  //s3.writeMicroseconds(-1);
+  //s6.writeMicroseconds(-1);
+  //s9.writeMicroseconds(-1);
+  //s18.writeMicroseconds(-1);
+  //s15.writeMicroseconds(-1);
+  //s12.writeMicroseconds(-1);
+  //delay(10);
+  
+  s8.writeMicroseconds(1950);//Replant knees 1
+  s2.writeMicroseconds(1950);
+  s14.writeMicroseconds(1950);
+  delay(100);
+  
+  s17.writeMicroseconds(1750);//Pick Up Knees 2
+  s11.writeMicroseconds(1750);
+  s5.writeMicroseconds(1750);
+  delay(200);
+  //s17.writeMicroseconds(-1);//Kill Knees 2
+  //s11.writeMicroseconds(-1);
+  //s5.writeMicroseconds(-1);
+  //delay(20);
+  
+  s3.writeMicroseconds(1750);//Move hips
+  s15.writeMicroseconds(1250);
+  s9.writeMicroseconds(1750);
+  delay(100);
+  s18.writeMicroseconds(1750);
+  s6.writeMicroseconds(1250);
+  s12.writeMicroseconds(1750);
+  delay(100);
+  //s3.writeMicroseconds(7,-1);
+  //s6.writeMicroseconds(11,-1);
+  //s9.writeMicroseconds(15,-1);
+  //s18.writeMicroseconds(24,-1);
+  //s15.writeMicroseconds(20,-1);
+  //s12.writeMicroseconds(16,-1);
+  //delay(10); 
+  }
