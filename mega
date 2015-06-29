@@ -476,3 +476,53 @@ delay(200);
 s5.writeMicroseconds(-1);
 delay(100);*/
 }
+
+void rotateRight()
+{
+int ankle[6] = {s1,s4,s7,s10,s13,s16};
+int knee[6] = {s2,s5,s8,s11,s14,s17};
+int hip[6] = {s3,s6,s9,s12,s15,s18};
+
+for(int i=0,i<6,i++)
+    {
+    knee[i].writeMicroseconds(1500);
+    ankle[i].writeMicroseconds(900);
+    delay(200);
+    hip[i].writeMicroseconds(1100);
+    delay(200);
+    knee[i].writeMicroseconds(1950);
+    ankle[i].writeMicroseconds(1050);
+    delay(300);
+    }
+    hip[1].writeMicroseconds(1500);
+    hip[2].writeMicroseconds(1500);
+    hip[3].writeMicroseconds(1500);
+    hip[4].writeMicroseconds(1500);
+    hip[5].writeMicroseconds(1500);
+    hip[6].writeMicroseconds(1500);
+}
+
+void rotateLeft()
+{
+int ankle[6] = {s1,s4,s7,s10,s13,s16};
+int knee[6] = {s2,s5,s8,s11,s14,s17};
+int hip[6] = {s3,s6,s9,s12,s15,s18};
+
+for(int i=0,i<6,i++)
+    {
+    knee[i].writeMicroseconds(1500);
+    ankle[i].writeMicroseconds(900);
+    delay(200);
+    hip[i].writeMicroseconds(1900);
+    delay(200);
+    knee[i].writeMicroseconds(1950);
+    ankle[i].writeMicroseconds(1050);
+    delay(300);
+    }
+    hip[1].writeMicroseconds(1500);
+    hip[2].writeMicroseconds(1500);
+    hip[3].writeMicroseconds(1500);
+    hip[4].writeMicroseconds(1500);
+    hip[5].writeMicroseconds(1500);
+    hip[6].writeMicroseconds(1500);
+}
