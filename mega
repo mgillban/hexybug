@@ -96,113 +96,127 @@ s3.writeMicroseconds(2000);
 
 void standUp()
 {
-s3.writeMicroseconds(1950);//Hip position
-s6.writeMicroseconds(1500);
-s9.writeMicroseconds(1250);
-s18.writeMicroseconds(1050);
-s15.writeMicroseconds(1500);
-s12.writeMicroseconds(1750);
-delay(200);
-//KillServos
+    //Hip position
+    s3.writeMicroseconds(1950);
+    s6.writeMicroseconds(1500);
+    s9.writeMicroseconds(1250);
+    s18.writeMicroseconds(1050);
+    s15.writeMicroseconds(1500);
+    s12.writeMicroseconds(1750);
+    delay(200);
 
-s2.writeMicroseconds(900);//Knee position
-s5.writeMicroseconds(900);
-s8.writeMicroseconds(900);
-s17.writeMicroseconds(900);
-s14.writeMicroseconds(900);
-s11.writeMicroseconds(900);
-delay(200);
-//KillServos
+//    //KillServos
+//    for(int i=0;i<32;i++)
+//    {
+//        writeMicroseconds(i,-1);
+//    }
 
-s1.writeMicroseconds(600);//Ankle position
-s4.writeMicroseconds(600);
-s7.writeMicroseconds(600);
-s16.writeMicroseconds(600);
-s13.writeMicroseconds(600);
-s10.writeMicroseconds(600);
-delay(500);
-//KillServos
+    //Knee position
+    s2.writeMicroseconds(900);
+    s5.writeMicroseconds(900);
+    s8.writeMicroseconds(900);
+    s17.writeMicroseconds(900);
+    s14.writeMicroseconds(900);
+    s11.writeMicroseconds(900);
+    delay(200);
 
-int ankAngle=600;
-for(int angle=1300;angle<2100;angle+=30);
-   {
-   s2.writeMicroseconds(angle);//LF increment
-   s1.writeMicroseconds(ankAngle);
-   delay(100);
-   //s1.writeMicroseconds(-1);
-   s14.writeMicroseconds(angle);//RM increment
-   s13.writeMicroseconds(ankAngle);
-   delay(100);
-   //s13.writeMicroseconds(-1);
-   s8.writeMicroseconds(angle);//LB increment
-   s7.writeMicroseconds(ankAngle);
-   delay(100);
-   //s7.writeMicroseconds(-1);
-   s17.writeMicroseconds(angle);//RF increment
-   s16.writeMicroseconds(ankAngle);
-   delay(100);
-   //s6.writeMicroseconds(-1);
-   s5.writeMicroseconds(angle);//LM increment
-   s4.writeMicroseconds(ankAngle);
-   delay(100);
-   //s4.writeMicroseconds(-1);
-   s11.writeMicroseconds(angle);//RB increment
-   s10.writeMicroseconds(ankAngle);
-   delay(100);
-   //s11.writeMicroseconds(-1);
-   }
+//    //KillServos
+//    for(int i=0;i<32;i++)
+//    {
+//        writeMicroseconds(i,-1);
+//    }
 
-s11.writeMicroseconds(1500);//Reset RB
-s12.writeMicroseconds(1500);
-delay(200);
-s10.writeMicroseconds(600);
-delay(100);
-s11.writeMicroseconds(1950);
-s10.writeMicroseconds(1050);
-delay(200);
-/*s10.writeMicroseconds(-1);
-s11.writeMicroseconds(-1);
-s12.writeMicroseconds(-1);
-delay(100);*/
+    //Ankle position
+    s1.writeMicroseconds(600);
+    s4.writeMicroseconds(600);
+    s7.writeMicroseconds(600);
+    s16.writeMicroseconds(600);
+    s13.writeMicroseconds(600);
+    s10.writeMicroseconds(600);
+    delay(500);
 
-s2.writeMicroseconds(1500);//Reset LF
-s3.writeMicroseconds(1500);
-delay(200);
-s1.writeMicroseconds(600);
-delay(100);
-s2.writeMicroseconds(1950);
-s1.writeMicroseconds(1050);
-delay(200);
-/*s1.writeMicroseconds(-1);
-s2.writeMicroseconds(-1);
-s3.writeMicroseconds(-1);
-delay(100);*/
+    
+//    //KillServos
+//    for(int i=0;i<32;i++)
+//    {
+//        writeMicroseconds(i,-1);
+//    }
 
-s17.writeMicroseconds(1500);//Reset RF
-s18.writeMicroseconds(1500);
-delay(200);
-s16.writeMicroseconds(600);
-delay(100);
-s17.writeMicroseconds(1950);
-s16.writeMicroseconds(1050);
-delay(200);
-/*s16.writeMicroseconds(-1);
-s17.writeMicroseconds(-1);
-s18.writeMicroseconds(-1);
-delay(100);*/
+Servo knee[] = {s2,s5, s8, s11, s14, s17};
+Servo ankle[] = {s1, s4, s7, s10, s13, s16};
 
-s8.writeMicroseconds(1500);//Reset LB
-s9.writeMicroseconds(1500);
-delay(200);
-s7.writeMicroseconds(600);
-delay(100);
-s8.writeMicroseconds(1950);
-s7.writeMicroseconds(1050);
-delay(200);
-/*s7.writeMicroseconds(-1);
-s8.writeMicroseconds(-1);
-s9.writeMicroseconds(-1);
-delay(100);*/
+//Stand
+int ankAngle = 600;
+for(int angle=1300; angle<2200; angle+=30)
+{
+  for(int h=0;h<6;h++)
+  {
+    knee[h].writeMicroseconds(angle);
+    ankle[h].writeMicroseconds(ankAngle);
+    delay(100);
+    //ankle[h].writeMicroseconds(-1);
+  }
+  ankAngle+=25;
+}
+
+
+    //RB
+    s11.writeMicroseconds(1500);
+    s12.writeMicroseconds(1500);
+    delay(200);
+    s10.writeMicroseconds(500);
+    delay(100);
+    s11.writeMicroseconds(1950);
+    s10.writeMicroseconds(1050);
+    delay(200);
+//    s10.writeMicroseconds(-1);
+//    s12.writeMicroseconds(-1);
+//    s11.writeMicroseconds(-1);
+    delay(100);
+
+    
+    //LF
+    s2.writeMicroseconds(1500);
+    s3.writeMicroseconds(1500);
+    delay(200);
+    s1.writeMicroseconds(600);
+    delay(100);
+    s2.writeMicroseconds(1950);
+    s1.writeMicroseconds(1050);
+    delay(200);
+//    s1.writeMicroseconds(5,-1);
+//    s2.writeMicroseconds(6,-1);
+//    s3.writeMicroseconds(7,-1);
+    delay(100);
+
+    //RF
+    s17.writeMicroseconds(1500);
+    s18.writeMicroseconds(1500);
+    delay(200);
+    s16.writeMicroseconds(600);
+    delay(100);
+    s17.writeMicroseconds(1950);
+    s16.writeMicroseconds(1050);
+    delay(200);
+//    s1.writeMicroseconds(5,-1);
+//    s2.writeMicroseconds(6,-1);
+//    s3.writeMicroseconds(7,-1);
+    delay(100);
+
+    //LB
+    s8.writeMicroseconds(1500);
+    s9.writeMicroseconds(1500);
+    delay(200);
+    s7.writeMicroseconds(600);
+    delay(100);
+    s8.writeMicroseconds(1950);
+    s7.writeMicroseconds(1050);
+    delay(200);
+//    s1.writeMicroseconds(5,-1);
+//    s2.writeMicroseconds(6,-1);
+//    s3.writeMicroseconds(7,-1);
+    delay(100);
+
 }
 
 void reset()
