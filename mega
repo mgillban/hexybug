@@ -151,18 +151,6 @@ for(int angle=1300;angle<2100;angle+=30);
    delay(100);
    //s11.writeMicroseconds(-1);
    }
-s11.writeMicroseconds(1500);//Reset RB
-s12.writeMicroseconds(1500);
-delay(200);
-s10.writeMicroseconds(600);
-delay(100);
-s11.writeMicroseconds(1950);
-s10.writeMicroseconds(1050);
-delay(200);
-/*s10.writeMicroseconds(-1);
-s11.writeMicroseconds(-1);
-s12.writeMicroseconds(-1);
-delay(100);*/
 
 s11.writeMicroseconds(1500);//Reset RB
 s12.writeMicroseconds(1500);
