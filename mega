@@ -1,48 +1,32 @@
 #include<Servo.h>
   Servo s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18;
+int inputPin=4;  // connect digital I/O 4 to the ECHO/Rx Pin
+int outputPin=5; // connect digital I/O 5 to the TRIG/TX Pin
 
 
 void setup() {
 
   s1.attach(22);
-  s1.writeMicroseconds(1500);
-
   s2.attach(23);
-  s2.writeMicroseconds(1500);
-
   s3.attach(24);
-  s3.writeMicroseconds(1500);
-s4.attach(26);
-  s4.writeMicroseconds(1500);
-s5.attach(27);
-  s5.writeMicroseconds(1500);
+  s4.attach(26);
+  s5.attach(27);
   s6.attach(28);
-  s6.writeMicroseconds(1500);
-s7.attach(30);
-  s7.writeMicroseconds(1500);
-
+  s7.attach(30);
   s8.attach(31);
-  s8.writeMicroseconds(1500);
-s9.attach(32);
-  s9.writeMicroseconds(1500);
+  s9.attach(32);
   s10.attach(34);
-  s10.writeMicroseconds(1500);
-s11.attach(35);
-  s11.writeMicroseconds(1500);
+  s11.attach(35);
   s12.attach(36);
-  s12.writeMicroseconds(1500);
   s13.attach(38);
-  s13.writeMicroseconds(1500);
   s14.attach(39);
-  s14.writeMicroseconds(1500);
   s15.attach(40);
-  s15.writeMicroseconds(1500);
   s16.attach(42);
-  s16.writeMicroseconds(1500);
   s17.attach(43);
-  s17.writeMicroseconds(1500);
   s18.attach(44);
-  s18.writeMicroseconds(1500);
+  Serial.begin(9600);
+  pinMode(inputPin, INPUT);
+  pinMode(outputPin, OUTPUT);
 
   
 
@@ -526,3 +510,19 @@ for(int i=0,i<6,i++)
     hip[5].writeMicroseconds(1500);
     hip[6].writeMicroseconds(1500);
 }
+
+void hexyping();
+{
+   digitalWrite(outputPin, LOW);  // send low pulse for 2μs
+   delayMicroseconds(2);
+   digitalWrite(outputPin, HIGH); // send high pulse for 10μs
+   delayMicroseconds(10);
+   digitalWrite(outputPin, LOW);  // back to low pulse
+   int distance = pulseIn(inputPin, HIGH);  // read echo value
+   int distance1= distance/29/2;  // in cm
+   Serial.println(distance1); 
+   int distance2= distance/74/2;  // in inches
+   Serial.println(distance2);
+   delay(50);  
+}
+
